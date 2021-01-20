@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.background {
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+    border: 3px solid black;
+    overflow: hidden;
+}
+.image {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.image img {
+    width: 100%;
+}
+#bike {
+    position: absolute;
+    bottom: 10%;
+    width: 100px;
+}
+.animate {
+    animation: jump 500ms;
+    transform: rotate(-30deg);
+}
+#bike img {
+    width: 100%;
+}
+#block {
+    background: red;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    border-radius: 50%;
+    animation: block 3s infinite linear;
+}
+@keyframes block {
+    0%{left: 610px;}
+    100%{left: -610px;}
+}
+@keyframes jump {
+    0%{bottom: 60px;}   
+    30%{bottom: 130px;}   
+    30%{bottom: 130px;}   
+    100%{bottom: 40px;}    
+}
